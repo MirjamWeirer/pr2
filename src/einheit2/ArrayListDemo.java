@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class ArrayListDemo {
     public static void main(String[] args) {
         ArrayList<String> namesForLuckyDraw = new ArrayList<String>(50);
+        //for a double arraylist i habe to write ArrayList<Double>
 
         //add elements to end of arraylist
         namesForLuckyDraw.add("Relindis");
