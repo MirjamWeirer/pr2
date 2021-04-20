@@ -1,6 +1,8 @@
 package einheit2;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 public class ArrayListDemo {
     public static void main(String[] args) {
@@ -35,7 +37,36 @@ public class ArrayListDemo {
         for (String s : namesForLuckyDraw){
             System.out.println(s);
         }
-
+        System.out.println("**************");
         //how to iterate over it - possiblity 3 iterator
+        Iterator<String> it = namesForLuckyDraw.iterator();
+        while (it.hasNext()){
+            String elem = it.next(); // next element
+            System.out.println(elem);
+        }
+        System.out.println("**************");
+        System.out.println("----------------");
+
+        //now to linkedlist
+        //create a linked list with the content of the arraylist
+        LinkedList<String> winner = new LinkedList<>(namesForLuckyDraw);
+
+        System.out.println(winner.getFirst());
+        System.out.println(winner.getLast());
+
+        //iterate over it (not that fast)
+        for (int i = 0; i < winner.size(); ++i){
+            System.out.println(winner.get(i));
+        }
+
+        //better to do the for each
+        for (String w: winner) {
+            System.out.println(w);
+        }
+        //iterate over it
+        Iterator<String> lIt = winner.iterator();
+        while (lIt.hasNext()){
+            System.out.println(lIt.next());
+        }
     }
 }

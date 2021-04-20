@@ -1,12 +1,14 @@
 package uebungsbeispiele.uebung01;
 
+import uebungsbeispiele.uebung01.Article;
+
 import java.util.Arrays;
 
 public class Order {
     private int nrArticles;
     private int articles[];
     private int capacityOrder;
-    private Article a = new Article("a",1,1);
+    private uebungsbeispiele.uebung01.Article a = new Article("a",1,1);
     private Object Article;
 
     public Order( int capacityOrder){
