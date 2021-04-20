@@ -12,5 +12,12 @@ public class WrapperDemo {
         //da autoboxing - primitive type and class type can be exchanged for each other
         number2 = 222; //new Integer ist not necessary but we still get an instance of an objekt
         int j = number2 + 7; //should not work because Integer + int but it works due to autoboxing
+
+        String doubleNr = "7.456";
+        System.out.println(doubleNr + 1000); //because doubleNr ist string we get cocatination
+
+        //we can conver do number
+        double d = Double.parseDouble(doubleNr);
+        System.out.println(d + 1000);
     }
 }
