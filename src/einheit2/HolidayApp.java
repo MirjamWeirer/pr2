@@ -1,6 +1,8 @@
 package einheit2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class HolidayApp {
     public static void main(String[] args) {
@@ -16,5 +18,15 @@ public class HolidayApp {
         System.out.println(Arrays.toString(holiday));
         Arrays.sort(holiday);
         System.out.println(Arrays.toString(holiday));
+        System.out.println("------------");
+        ArrayList<Holiday> holidays = new ArrayList<>();
+        holidays.add(new Holiday("Österreich",7,4));
+        holidays.add(new Holiday("Karibik",7,2));
+        holidays.add(new Holiday("Dubai",2,4));
+        holidays.add(new Holiday("Dubai",2,3));
+        holidays.add(new Holiday("Deutschland",7,3));
+        System.out.println(holidays);
+        Collections.sort(holidays);
+        System.out.println(holidays);
     }
 }
