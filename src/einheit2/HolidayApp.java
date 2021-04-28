@@ -25,6 +25,7 @@ public class HolidayApp {
         holidays.add(new Holiday("Dubai",2,4));
         holidays.add(new Holiday("Dubai",2,3));
         holidays.add(new Holiday("Deutschland",7,3));
+        holidays.add(new Holiday("Deutschland",3,3));
         System.out.println(holidays);
         Collections.sort(holidays);
         System.out.println(holidays);
