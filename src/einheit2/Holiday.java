@@ -1,6 +1,6 @@
 package einheit2;
 
-public class Holiday {
+public class Holiday implements Comparable<Holiday> {
     private String destination;
     private int lengthInDays;
     private int nrPersons;
@@ -10,8 +10,9 @@ public class Holiday {
         this.lengthInDays = lengthInDays;
         this.nrPersons = nrPersons;
     }
+
     //does not make that much senes but just a little example
-    public Holiday(){
+    public Holiday() {
         this.destination = "Österreich";
         this.lengthInDays = 2;
         this.nrPersons = 2;
@@ -31,7 +32,7 @@ public class Holiday {
     }
 
     public void setLengthInDays(int lengthInDays) {
-        if (lengthInDays > 0){
+        if (lengthInDays > 0) {
             this.lengthInDays = lengthInDays;
         }
     }
@@ -51,5 +52,24 @@ public class Holiday {
                 ", lengthInDays=" + lengthInDays +
                 ", nrPersons=" + nrPersons +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Holiday o) {
+        if (this.lengthInDays < o.lengthInDays) {
+            return -1;
+        }
+        if (this.lengthInDays > o.lengthInDays) {
+            return 1;
+        }
+
+        if (this.nrPersons < o.nrPersons) {
+            return -1;
+        }
+        if (this.nrPersons > o.nrPersons) {
+            return 1;
+        }
+
+        return 0;
     }
 }
