@@ -27,7 +27,7 @@ public class HolidayApp {
         holidays.add(new Holiday("Deutschland",7,3));
         holidays.add(new Holiday("Deutschland",3,3));
         System.out.println(holidays);
-        Collections.sort(holidays);
+        Collections.sort(holidays, new HolidayDestinationComperator());
         System.out.println(holidays);
     }
 }
