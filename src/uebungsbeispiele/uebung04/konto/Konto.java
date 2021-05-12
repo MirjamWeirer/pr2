@@ -17,4 +17,12 @@ public class Konto {
         kontostand -= wert;
         return wert;
     }
+
+    public String getInhaber() {
+        return inhaber;
+    }
+
+    public double getKontostand() {
+        return kontostand;
+    }
 }

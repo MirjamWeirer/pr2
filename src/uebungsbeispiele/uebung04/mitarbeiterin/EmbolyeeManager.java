@@ -25,7 +25,7 @@ public class EmbolyeeManager {
     public HashMap<String,Double>getSalaryByDepartment(){
         HashMap<String,Double> employee = new HashMap<>();
         for (Embloyee e : empList){
-            employee.put(e.department, e.getFullSalary());
+            employee.put(e.department, employee.getOrDefault(e.department,0.0)+e.getFullSalary());
         }
         return employee;
     }
