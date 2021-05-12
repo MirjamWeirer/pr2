@@ -12,8 +12,7 @@ public class Article {
     }
 
     public void setName(String name) {
-        if (name != null)
-            this.name = name;
+        this.name = name;
     }
     public void setNumber (int number){
         this.number = number;

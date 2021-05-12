@@ -2,11 +2,13 @@ package uebungsbeispiele.uebung01;
 
 public class OrderApp {
     public static void main(String[] args) {
-        Article buch = new Article("Zwischenzeit",2,10.5);
-        Order order1 = new Order(3);
-        buch.getName();
-        System.out.println(buch);
-        System.out.println(order1);
-        //order1.addArticle(buch);
+        Order od = new Order(4);
+
+        for (int i = 0; i < 14; i++){
+            od.addArticle(new Article("Haus",1,i));
+            System.out.println(od);
+        }
+        od.removeArticle(12);
+        System.out.println(od);
     }
 }
