@@ -18,6 +18,7 @@ public class ArraySort {
         Arrays.sort(darr);
         System.out.println(Arrays.toString(darr));
 
+        //compareTo
         Dog [] dogs = {new Dog("grün",2) ,new  Dog("braun",1) , new Dog("blau",4), new Dog("grün",1)};
         System.out.println(Arrays.toString(dogs));
         Arrays.sort(dogs);
